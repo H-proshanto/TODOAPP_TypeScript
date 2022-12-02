@@ -8,19 +8,13 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-export const ButtonUI = ({
-  title,
-  onPress,
-  body,
-  button,
-  text,
-}: {
+export const ButtonUI: React.FC<{
   title?: string;
   onPress?: any;
   body?: object;
   button?: object;
   text?: object;
-}) => {
+}> = ({title, onPress, body, button, text}) => {
   const isLoading = useSelector(
     (state: any) =>
       state.todo.status !== 'idle' || state.user.status !== 'idle',

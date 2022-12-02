@@ -5,13 +5,10 @@ import {useSelector} from 'react-redux';
 import {StyleSheet, View, ScrollView, Text, Alert} from 'react-native';
 import {Formik} from 'formik';
 
-export const TodoForm = ({
-  navigation,
-  route,
-}: {
+export const TodoForm: React.FC<{
   navigation: any;
   route: any;
-}) => {
+}> = ({navigation, route}) => {
   const requestError = useSelector((state: any) => state.todo.error);
   const todo = route.params?.todo;
   const taskId = todo?.id || route.params.taskId;

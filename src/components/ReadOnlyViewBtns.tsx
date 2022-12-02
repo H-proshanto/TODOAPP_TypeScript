@@ -10,21 +10,14 @@ import {
   deleteTask,
 } from '../features/todo';
 
-export const ReadOnlyViewBtns = ({
-  navigation,
-  view,
-  status,
-  taskId,
-  title,
-  description,
-}: {
+export const ReadOnlyViewBtns: React.FC<{
   navigation: any;
   view: string;
   status: boolean;
   taskId: number;
   title: string;
   description: string;
-}) => {
+}> = ({navigation, view, status, taskId, title, description}) => {
   const userId = useSelector((state: any) => state.user.user.id);
   const dispatch = useDispatch();
   const requestStatus = useSelector((state: any) => state.todo.status);

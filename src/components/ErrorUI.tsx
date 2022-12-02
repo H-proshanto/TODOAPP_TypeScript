@@ -3,7 +3,7 @@ import {fetchAllTodo} from '../features/todo';
 import {useDispatch, useSelector} from 'react-redux';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
-export const ErrorUI = () => {
+export const ErrorUI: React.FC = () => {
   const errorMessage = useSelector((state: any) => state.todo.error);
   const dispatch = useDispatch();
   const userId = useSelector((state: any) => state.user.user.id);

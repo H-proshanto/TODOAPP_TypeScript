@@ -15,7 +15,10 @@ import {
   Alert,
 } from 'react-native';
 
-export const TodoView = ({todo, navigation}: {todo: any; navigation: any}) => {
+export const TodoView: React.FC<{todo: any; navigation: any}> = ({
+  todo,
+  navigation,
+}) => {
   const {
     id,
     title,

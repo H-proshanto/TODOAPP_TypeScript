@@ -5,7 +5,7 @@ import {ButtonUI} from './ButtonUI';
 import {useDispatch, useSelector} from 'react-redux';
 import {StyleSheet, Text, View} from 'react-native';
 
-export const HeaderUI = ({navigation}: {navigation: any}) => {
+export const HeaderUI: React.FC<{navigation: any}> = ({navigation}) => {
   const {user} = useSelector((state: any) => state.user);
   const dispatch = useDispatch();
 

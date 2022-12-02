@@ -1,19 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 
-export const InputField = ({
-  view,
-  text,
-  setter,
-  placeholder,
-  onBlur,
-}: {
+export const InputField: React.FC<{
   view: string;
   text: string;
   setter: any;
   placeholder: string;
   onBlur: any;
-}) => {
+}> = ({view, text, setter, placeholder, onBlur}) => {
   return (
     <>
       <View style={styles.inputContainer}>

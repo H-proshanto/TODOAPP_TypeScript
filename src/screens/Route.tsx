@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 
-export const Route = ({navigation}: {navigation: any}) => {
+export const Route: React.FC<{navigation: any}> = ({navigation}) => {
   const {user} = useSelector((state: any) => state.user);
 
   useEffect(() => {

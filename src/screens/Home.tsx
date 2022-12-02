@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import {Formik} from 'formik';
 
-export const Home = ({navigation}: {navigation: any}) => {
+export const Home: React.FC<{navigation: any}> = ({navigation}) => {
   const error = useSelector((state: any) => state.user.error);
   const userStatus = useSelector((state: any) => state.user.status);
   const dispatch = useDispatch();

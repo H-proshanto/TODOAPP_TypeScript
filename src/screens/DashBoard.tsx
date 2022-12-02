@@ -6,7 +6,7 @@ import {fetchAllTodo, resetStatus} from '../features/todo';
 import {useDispatch, useSelector} from 'react-redux';
 import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 
-export const DashBoard = ({navigation}: {navigation: any}) => {
+export const DashBoard: React.FC<{navigation: any}> = ({navigation}) => {
   const requestStatus = useSelector((state: any) => state.todo.status);
   const [isLoading, setIsLoading] = useState(true);
   const userId = useSelector((state: any) => state.user.user.id);
