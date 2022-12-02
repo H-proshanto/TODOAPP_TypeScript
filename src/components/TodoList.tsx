@@ -6,7 +6,7 @@ import {View, StyleSheet, FlatList} from 'react-native';
 export const TodoList = ({navigation}: {navigation: object}) => {
   const {taskList} = useSelector((state: any) => state.todo);
 
-  const renderItem = ({item}) => (
+  const renderItem = ({item}: any) => (
     <TodoView todo={item} navigation={navigation} />
   );
 
