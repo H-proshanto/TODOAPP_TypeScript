@@ -24,6 +24,7 @@ export const Home: React.FC<{navigation: any}> = ({navigation}) => {
           text: 'Okay',
         },
       ]);
+      dispatch(resetStatus());
     }
 
     if (userStatus === 'resolved') {
